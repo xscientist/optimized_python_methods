@@ -22,7 +22,7 @@ Here is a sample SQL query and two ways of writing the same query as string impl
     tables = ",".join(tables)
     method_two = '''SELECT {columns} FROM {tables} WHERE columnOne = '{value}' '''.format(columns=columns, tables=tables,
                                                                                       value=value)
-    print("Method Two: " + method_two)
+    print("Method Two: {sql_query}".format(sql_query=method_two))
 
 Both the methods print the exact same query and method one takes the shorter number of lines, but debugging a query that looks like method two is going to be easier, and always understand that a code should be readable
 
